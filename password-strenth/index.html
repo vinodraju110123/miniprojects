@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="main">
+    <input
+      type="text"
+      id="password"
+      placeholder="Enter the password"
+      autocomplete="off"
+    />
+
+    <div class="indicators">
+      <span id="lc">Lowercase</span>
+      <span id="uc">Uppercase</span>
+      <span id="num">Number</span>
+      <span id="sym">Symbols</span>
+    </div>
+
+    <div class="progressContainer">
+      <div id="progressBar" class="progressBar"></div>
+    </div>
+
+    <p>Password has <strong id="charCount">0</strong> chars</p>
+    <p>Your password is <strong id="strength">Weak</strong></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

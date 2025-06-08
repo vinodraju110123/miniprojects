@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dots{
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(140, 102, 53);
+    display: inline-block;
+ 
+}
+
+.dot.active{
+    background-color: aqua;
+}

@@ -1,0 +1,20 @@
+body{
+    display: flex;
+   justify-content: center;
+   padding: 100px;
+}
+
+#progessbar{
+    height: 10px;
+    width: 80%;
+    background-color: rgb(106, 197, 197);
+    
+    
+}
+
+#progress{
+  
+   height: 100%;
+     width: 0%;
+    background-color:rgb(4, 26, 19);
+}

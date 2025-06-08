@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Telephone Formatter</title>
+</head>
+<body>
+  <h2>Telephone Formatter</h2>
+  <input type="text" id="phone" placeholder="Enter phone number" />
+  
+  <script>
+    const phone = document.getElementById('phone');
+
+    const getNumbersOnly = (str) =>
+      [...str].filter(ch => /\d/.test(ch)).join('').slice(0, 10);
+
+    const formatPhone = (str) => {
+      const num = getNumbersOnly(str);
+      if (num.length <= 3) return num;
+      return '+(' + num.substring(0, 3) + ') - ' + num.substring(3);
+    };
+
+    phone.addEventListener('input', () => {
+      const formatted = formatPhone(phone.value);
+      phone.value = formatted;
+    });
+  </script>
+</body>
+</html>
