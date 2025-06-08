@@ -5,6 +5,7 @@ const images = [
 
 let leftArr = document.getElementById('leftArr');
 let rightArr = document.getElementById('rightArr');
+let dots = document.querySelectorAll('.dot');
 let image = document.getElementById('image');
 
 let idx = 0;
@@ -21,3 +22,18 @@ rightArr.addEventListener('click', function(){
 console.log(idx);
 update();
 });
+
+leftArr.addEventListener('click', function(){
+
+    idx = (idx-1+images.length)%images.length;
+console.log(idx);
+update();
+});
+
+
+dots.forEach((dot,i)=>{
+    dot.addEventListener("click", ()=>{
+        idx = i;
+        update();
+    })
+})
